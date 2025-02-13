@@ -6,11 +6,11 @@ import tiktoken
 
 class Agent(BaseModel):
     name: str = "Agent"
-    model: str = "deepseek-r1:8b"
+    model: str = "deepseek-r1-distill-llama-8b"
     api_key: str = "EMPTY" 
     temperature: str = "0.0"
     instructions: str = "You are a helpful Agent"
-    base_url: str = "http://localhost:11434/v1/"  # Default base URL
+    base_url: str = "https://deepseek-r1-distill-llama-8b.accenture-poc-genai.svc.cluster.local/v1"  # Default base URL
 
     # Define an execute method in the Agent class that subclasses can override
     def execute(self, input_data: str):
